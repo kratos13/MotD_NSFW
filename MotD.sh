@@ -70,5 +70,5 @@ echo -e "wget -qO - http://www.asciiartfarts.com/random.cgi | sed -n '/<pre>/,/<
 echo -e 'printf "\n"' >> /etc/update-motd.d/00-header
 echo -e '' >> /etc/update-motd.d/00-header
 echo -e 'printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(hostname)"' >> /etc/update-motd.d/00-header
-echo -e 'printf "\n"" >> 00-header' >> /etc/update-motd.d/00-header
+echo -e 'printf "\n""' >> /etc/update-motd.d/00-header
 
