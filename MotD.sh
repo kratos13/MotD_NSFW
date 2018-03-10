@@ -56,19 +56,4 @@ echo "Now creating your new header file for the MotD."
 
 touch /etc/update-motd.d/00-header
 
-## You will then insert the following in to your 00-header file
-echo -e '#!/bin/sh' >> /etc/update-motd.d/00-header
-echo -e '' >> /etc/update-motd.d/00-header
-echo -e '[ -r /etc/lsb-release ] && . /etc/lsb-release' >> /etc/update-motd.d/00-header
-echo -e '' >> /etc/update-motd.d/00-header
-echo -e 'if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then' >> /etc/update-motd.d/00-header
-echo -e '        # Fall back to using the very slow lsb_release utility' >> /etc/update-motd.d/00-header
-echo -e '        DISTRIB_DESCRIPTION=$(lsb_release -s -d)' >> /etc/update-motd.d/00-header
-echo -e 'fi' >> /etc/update-motd.d/00-header
-echo -e '' >> /etc/update-motd.d/00-header
-echo -e "wget -qO - http://www.asciiartfarts.com/random.cgi | sed -n '/<pre>/,/<\/pre>/p' | sed -n '/<table*/,/<\/table>/p' | sed '1d' | sed '$d' | recode html..ascii" >> /etc/update-motd.d/00-header
-echo -e 'printf "\n"' >> /etc/update-motd.d/00-header
-echo -e '' >> /etc/update-motd.d/00-header
-echo -e 'printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(hostname)"' >> /etc/update-motd.d/00-header
-echo -e 'printf "\n""' >> /etc/update-motd.d/00-header
-
+cat ./00-header >> /etc/update-motd.d/00-header
