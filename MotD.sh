@@ -56,4 +56,4 @@ echo "Now creating your new header file for the MotD."
 
 touch /etc/update-motd.d/00-header
 
-cat ./00-header >> /etc/update-motd.d/00-header
+sudo cat ./00-header >> /etc/update-motd.d/00-header
