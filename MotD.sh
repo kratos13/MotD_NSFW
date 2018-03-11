@@ -17,34 +17,28 @@ fi
 apt-get update && apt-get install figlet recode
 
 
-echo " "
 
 ## We will need to change the current #MotD file... 
 mkdir /etc/update-motd.d/
 
-echo " "
 
 
 cd /etc/update-motd.d/
 
 
-echo " "
 
 
 ## Create a new header file for your new #MotD
 touch 00-header
 
-echo " "
 
 ## Change the file type, so that #bash can run it
 chmod +x /etc/update-motd.d/*
 
-echo " "
 
 ## Remove your old #MotD
 rm /etc/motd
 
-echo " "
 
 ##Create a symlink from /var to the /etc file
 ln -s /var/run/motd /etc/motd
@@ -54,6 +48,24 @@ ln -s /var/run/motd /etc/motd
 
 echo "Now creating your new header file for the MotD."
 
-touch /etc/update-motd.d/00-header
+sleep 2
 
-sudo cat ./00-header >> /etc/update-motd.d/00-header
+
+cd "$(dirname "$(find / -type f -name 00-header | head -1)")" 
+
+cp -Rf ./00-header /etc/update-motd.d/
+
+echo "Looks good!"
+
+sleep 2
+
+bash /etc/update-motd.d/00-header
+
+sleep 2 
+
+bash /etc/update-motd.d/00-header
+
+sleep 2
+
+
+
