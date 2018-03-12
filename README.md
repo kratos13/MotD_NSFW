@@ -1,31 +1,38 @@
-### This is a {NSFW} Message_of_the_Day script. It pulls from http://www.asciiartfarts.com, and displays a random ASCII art each time you log in. ### 
+# This is a {NSFW} Message_of_the_Day script. It pulls from http://www.asciiartfarts.com, and displays a random ASCII art each time you log in. ### 
 
 
-(+) Install the necessary packages
+*(+) Install the necessary packages*
 # sudo apt-get install figlet recode
 
-(+) We will need to change the current #MotD file... 
+
+*(+) We will need to change the current #MotD file...* 
 # mkdir /etc/update-motd.d/
 
 # cd /etc/update-motd.d/
 
-(+) create a new header file for your new #MotD
+
+*(+) create a new header file for your new #MotD*
 # touch 00-header
 
-(+) Change the file type, so that #bash can run it
+
+*(+) Change the file type, so that #bash can run it*
 # chmod +x /etc/update-motd.d/*
 
-(+) Remove your old #MotD
+
+*(+) Remove your old #MotD*
 # rm /etc/motd
 
-(+) Create a symlink from /var to the /etc file
+
+*(+) Create a symlink from /var to the /etc file*
 # ln -s /var/run/motd /etc/motd
 
 *********************************************************************
 *********************************************************************
 
-(+) You will then insert the following in to your 00-header file
-#!/bin/sh
+*(+) You will then insert the following in to your 00-header file*
+
+
+`#!/bin/sh
  
 [ -r /etc/lsb-release ] && . /etc/lsb-release
  
@@ -38,4 +45,4 @@ wget -qO - http://www.asciiartfarts.com/random.cgi | sed -n '/<pre>/,/<\/pre>/p'
 printf "\n"
  
 printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(hostname)"
-printf "\n"
+printf "\n"`
