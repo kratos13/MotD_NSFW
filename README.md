@@ -32,15 +32,15 @@
 *(+) You will then insert the 00-header file to /etc/update-motd.d/*
 
 
-`
-  o                               
- |__|                               
-(_O_o)                              
- _||_  -- DO ME SIX WAYS FROM SUNDAY
-//  |\                              
-\'--'/                              
- || |                               
- '-'-'                              
+
+>  o                               
+> |__|                               
+>(_O_o)                              
+> _||_  -- DO ME SIX WAYS FROM SUNDAY
+>//  |\                              
+>\'--'/                              
+> || |                               
+> '-'-'                              
 
 Welcome to Raspbian GNU/Linux 8.0 (jessie) (cronus).
-`
+
