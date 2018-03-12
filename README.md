@@ -29,28 +29,10 @@
 *********************************************************************
 *********************************************************************
 
-*(+) You will then insert the following in to your 00-header file*
+*(+) You will then insert the 00-header file to /etc/update-motd.d/*
 
 
-`#!/bin/sh
- 
-[ -r /etc/lsb-release ] && . /etc/lsb-release
- 
-if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
-        # Fall back to using the very slow lsb_release utility
-        DISTRIB_DESCRIPTION=$(lsb_release -s -d)
-fi
- 
-wget -qO - http://www.asciiartfarts.com/random.cgi | sed -n '/<pre>/,/<\/pre>/p' | sed -n '/<table*/,/<\/table>/p' | sed '1d' | sed '$d' | recode html..ascii
-printf "\n"
- 
-printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(hostname)"
-printf "\n"`
-
-
-
-
-
+`
   o                               
  |__|                               
 (_O_o)                              
@@ -61,12 +43,4 @@ printf "\n"`
  '-'-'                              
 
 Welcome to Raspbian GNU/Linux 8.0 (jessie) (cronus).
-
-
-
-
-
-
-
-
-
+`
