@@ -46,3 +46,27 @@ printf "\n"
  
 printf "Welcome to %s (%s).\n" "$DISTRIB_DESCRIPTION" "$(hostname)"
 printf "\n"`
+
+
+
+
+
+  o                               
+ |__|                               
+(_O_o)                              
+ _||_  -- DO ME SIX WAYS FROM SUNDAY
+//  |\                              
+\'--'/                              
+ || |                               
+ '-'-'                              
+
+Welcome to Raspbian GNU/Linux 8.0 (jessie) (cronus).
+
+
+
+
+
+
+
+
+
