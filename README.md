@@ -1,4 +1,4 @@
-# This is a {NSFW} Message_of_the_Day script. It pulls from http://www.asciiartfarts.com, and displays a random ASCII art each time you log in. ### 
+#TEST#1 This is a {NSFW} Message_of_the_Day script. It pulls from http://www.asciiartfarts.com, and displays a random ASCII art each time you log in. ### 
 
 
 *(+) Install the necessary packages*
